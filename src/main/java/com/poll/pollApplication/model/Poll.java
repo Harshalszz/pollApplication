@@ -19,8 +19,8 @@ public class Poll {
 
     // we can create an entity like this also
     @ElementCollection
-    private List<String> options = new ArrayList<>();
+    private List<OptionVote> options = new ArrayList<>();
 
-    @ElementCollection
-    private List<Long> votes = new ArrayList<>();
+//    @ElementCollection
+//    private List<Long> votes = new ArrayList<>();
 }
