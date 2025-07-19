@@ -17,6 +17,7 @@ public class Poll {
     private Long id;
     private String question;
 
+    // we can create an entity like this also
     @ElementCollection
     private List<String> options = new ArrayList<>();
 
