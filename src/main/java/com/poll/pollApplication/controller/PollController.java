@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/polls")
 public class PollController {
@@ -38,5 +39,10 @@ public class PollController {
     @PostMapping("/vote")
     public void vote(@RequestBody Vote vote){
         pollService.vote(vote.getPollId(),vote.getOptionIndex());
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deletePoll(@PathVariable Long id){
+        pollService.deletePoll(id);
     }
 }
