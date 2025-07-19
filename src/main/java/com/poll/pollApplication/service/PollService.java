@@ -4,6 +4,8 @@ import com.poll.pollApplication.model.Poll;
 import com.poll.pollApplication.repository.PollRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PollService {
 
@@ -15,5 +17,9 @@ public class PollService {
 
     public Poll createPoll(Poll poll){
         return pollRepository.save(poll);
+    }
+
+    public List<Poll> getPolls() {
+        return pollRepository.findAll();
     }
 }
